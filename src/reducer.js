@@ -17,6 +17,13 @@ const reducer = (state, action) => {
         basket: [...state.basket, action.item],
       };
 
+      case 'EMPTY_BASKET':
+      return {
+        ...state,
+        basket: []
+      }
+
+      
       case "REMOVE_FORM_BASKET":
         // return{
         //   ...state,
@@ -53,3 +60,4 @@ const reducer = (state, action) => {
 };
 
 export default reducer;
+
